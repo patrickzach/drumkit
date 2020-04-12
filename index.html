@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drums</title>
+</head>
+<body>
+    JavaScript Dumkit by <a href="https://www.patrickzach.at">Patrick Zach</a><br>
+    Snare Sample by: <a href="https://freesound.org/people/altemark/sounds/188113/">https://freesound.org/people/altemark/sounds/188113/</a><br>
+    All Other Samples by: <a href="http://ccmixter.org/files/carbonmonoxidemusic/23425">http://ccmixter.org/files/carbonmonoxidemusic/23425</a><br><br>
+
+    <div id="drums">
+        
+        <button v-for="sample in drumsamples" class="sample" v-on:click="playSample(sample.title)">{{sample.title}}
+            <audio :id="sample.title" :src="'sounds/' + sample.sound"></audio>
+        </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/drums.js"></script>
+</body>
+</html>
